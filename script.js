@@ -21,9 +21,28 @@ console.log(cardElem)
 //quando clicco sul bottone display none l'immagine corrente e display block l'immagine none
 
 btnElem.addEventListener("click", function () {
+    const isBlack = btnElem.classList.contains("btn-dark")
+    console.log(isBlack)
+    if (isBlack ===true){
+        btnElem.classList.remove("btn-dark")
+    img2Elem.style.display = "none"//ho provato un approccio misto
+    img1Elem.classList.remove("d-none")
+     img1Elem.style.display = "flex" 
+   cardElem.classList.add("bg-dark")
+    btnElem.innerText ="Accendi"
+  
+    }else{
+
+   
+   btnElem.classList.add("btn-dark")
     img1Elem.style.display = "none"//ho provato un approccio misto
     img2Elem.classList.remove("d-none")
-    img2Elem.style.display = "flex pe-5" //non riesco a metetrlo al centro
+    img2Elem.style.display = "flex" //non riesco a metterlo al centro
     cardElem.classList.remove("bg-dark")
+    btnElem.innerText ="Spegni"
+     }
+  
+
+  
 
 })
